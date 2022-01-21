@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AddCategory from './components/AddCategory'
-import './index.css';
-
-
+import GifExpertApp from './GifExpretApp';
+import './index.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <AddCategory />
-  </React.StrictMode>,
+  <GifExpertApp></GifExpertApp>,
   document.getElementById('root')
 );
