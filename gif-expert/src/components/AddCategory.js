@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AddCategoy = () => {
+const AddCategoy = ({setCategories}) => {
 
     const [inputValue, setInputValue] = useState('Hello World');
 
@@ -11,7 +11,12 @@ const AddCategoy = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('it works')
+        if(inputValue.length > 0) {
+            // calling high order componen function
+            setCategories(categories => [inputValue, ...categories]);
+            setInputValue('');
+            console.log('it works');
+        }
     }
 
     return (
